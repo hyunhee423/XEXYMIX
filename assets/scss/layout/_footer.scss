@@ -1,0 +1,40 @@
+footer{
+    background-color: #62B9D6;
+    @include padding-b;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    .footer-wrap{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+
+    color: #fff;
+    h4{
+        font-weight: 600;
+    }
+    div{
+        grid-column: span 2;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+        a{
+            display: block;
+            transition: all .3s;
+            padding-bottom: 3px;
+                }
+        a:hover{
+            text-underline-offset: 0.25rem;
+            text-decoration: underline;
+        }
+    }
+
+    
+    }
+    small{
+        display: block;
+       color: #fff;
+       font-size: 14px;
+       text-align: right;
+    }
+}

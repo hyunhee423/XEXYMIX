@@ -1,0 +1,145 @@
+@mixin pos-c {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin pos-vt {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin pos-hr {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin ellipsis($line: 1) {
+
+    @if($line > 1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }
+
+    @else {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+}
+
+@mixin padding-r {
+    padding-right: 32px;
+
+}
+
+@mixin padding-l {
+    padding-left: 32px;
+}
+
+@mixin padding-b {
+    padding: 32px;
+}
+
+@mixin btn {
+    width: 160px;
+    height: 48px;
+    margin-top: 16px;
+    display: inline-block;
+    line-height: 48px;
+    text-align: center;
+    background-color: #DFFE00;
+    border: 1px solid #DFFE00;
+    text-decoration: none;
+    color: #1F2A44;
+    border-radius: 48px;
+    transition: background-color .3s,color .3s, border .3s;
+}
+
+@mixin btn-hov {
+    background-color: #1F2A44;
+    color: #fff;
+    border: 1px solid #1F2A44;
+}
+
+@mixin dim {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(52.73deg, rgba(0, 0, 0, 0.4) 31.38%, rgba(0, 0, 0, 0) 63.29%);
+    pointer-events: none;
+}
+@mixin sect-base{
+    position: relative;
+    scroll-margin-top: 4rem;
+    height: calc(9.23px * 90 - 0px);
+}
+@mixin base-bg {
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin img-bg {
+    opacity: 1;
+    transition: opacity 500ms ease 0s;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+@mixin text-pos{
+    @include padding-b;
+    position: absolute;
+    z-index: 6;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    max-width: 46.875rem;
+    color: #fff;
+}
+
+@mixin pc() {
+
+    /* 노트북 & PC (해상도 1024px)*/
+    @media all and (max-width:1280px) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+
+    /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+    @media all and (max-width:1023px) {
+        @content;
+        
+    }
+}
+
+@mixin mobile() {
+
+    /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+    @media all and (max-width:767px) {
+        @content;
+    }
+
+}

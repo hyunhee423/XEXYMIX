@@ -19,6 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="./assets/js/splitType.min.js"></script>
     <script src="./assets/js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/265b940d30.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -63,22 +64,26 @@
 
         <div class="nav-middle">
             <a href="">회원가입</a>
-            <button class="btn-book">오프라인 스토어</button>
+            <button class="btn-book"><span>오프라인 스토어</span><i class="fa-solid fa-store"></i></button>
         </div>
 
         <div class="btn-nav">
-            <div class="btn-menu">
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
+            <a class="menu-trigger">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </a>
         </div>
 
         <nav id="MobNav">
-            <ul class="nav-list">
+            <ul class="mob-list">
+                <div class="btn-cloes">
+                    <span class="line"></span>
+                </div>
                 <li><a href="">블랙라벨위크</a></li>
                 <li><a href="">신상할인</a></li>
                 <li class="sub-menu"><a href="javascript:void(0);" class="class">베스트 <span></span></a>
-                    <ul class="sub-list">
+                    <ul class="sub-list2">
                         <li><a href="">우먼즈</a></li>
                         <li><a href="">맨즈</a></li>
                         <li><a href="">골프</a></li>
@@ -210,7 +215,8 @@
     <main class="main">
         <section class="sc-main">
             <div class="bg">
-                <img src="https://xexymix.jpg3.kr/xexymix/2020/sub/cate/cate_bl_231010.jpg" alt="background">
+                <img class="pc-bg" src="https://xexymix.jpg3.kr/xexymix/2020/sub/cate/cate_bl_231010.jpg" alt="background">
+                <img class="mob-bg" src="https://xexymix.jpg3.kr/xexymix/2020/main/main_banner_231214_2.jpg" alt="mobile-bg">
             </div>
             <div class="text-area">
                 <h2>XEXYMIX BLACK LABEL</h2>

@@ -1,4 +1,84 @@
-#MobNav{
-display: none;
-}
+#MobNav {
+    display: none;
 
+    @include mobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mob-list {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 50%;
+        height: 100%;
+        overflow: hidden scroll;
+        background-color: #62B9D6;
+        padding: 50px 32px 4rem;
+        z-index: 110;
+        color: #fff;
+        -webkit-transform: translateX(200%);
+        transform: translateX(200%);
+        visibility: hidden;
+        -webkit-transition: 0.5s cubic-bezier(1, 0.51, 0.19, 1);
+        transition: 0.5s cubic-bezier(1, 0.51, 0.19, 1);
+        &.on {
+            transform: translateX(0);
+            visibility: visible;
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .btn-cloes {
+            position: absolute;
+            top: 18px;
+            right: 32px;
+            z-index: 10;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all .2s;
+            &:hover {
+                transform: rotate(90deg);
+            }
+
+            
+            .line{
+                &::before,&::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #fff;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+                &::before {
+                    transform: translateY(-50%) rotate(45deg);
+                }
+                &::after {
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+            }
+        }
+
+        li {
+            position: relative;
+            text-align: left;
+            display: block;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            a{
+                font-size: 1.2rem;
+            }
+            .sub-list2{
+                padding-left: 20px;
+                padding-top: 20px;
+            }
+        }
+    }
+}

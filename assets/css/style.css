@@ -252,6 +252,12 @@ header {
   transition: background 0.3s 0.2s, -webkit-transform 0.3s;
   transition: background 0.3s 0.2s, transform 0.3s;
   transition: background 0.3s 0.2s, transform 0.3s, -webkit-transform 0.3s;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  header {
+    height: 60px;
+  }
 }
 header.hide {
   -webkit-transform: translateY(-100%);
@@ -295,6 +301,46 @@ header::after {
 }
 header .btn-nav {
   display: none;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  header .btn-nav {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 32px;
+  }
+}
+header .btn-nav .menu-trigger {
+  display: inline-block;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: 30px;
+  height: 24px;
+}
+header .btn-nav .menu-trigger :nth-child(1) {
+  top: 0;
+}
+header .btn-nav .menu-trigger :nth-child(2) {
+  top: 10px;
+}
+header .btn-nav .menu-trigger :nth-child(3) {
+  bottom: 0;
+}
+header .btn-nav .menu-trigger span {
+  display: inline-block;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
 }
 header h1 {
   position: absolute;
@@ -304,6 +350,12 @@ header h1 {
           transform: translate(-50%, -50%);
   outline-offset: 3px;
   outline: transparent solid 1px;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  header h1 {
+    top: 50%;
+  }
 }
 header h1 .logo {
   fill: #fff;
@@ -351,6 +403,12 @@ header .nav-list {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  header .nav-list {
+    display: none;
+  }
 }
 header .nav-list li {
   position: relative;
@@ -423,6 +481,24 @@ header .sub-menu .sub-list::before {
 header .sub-menu .sub-menu.active .sub-list {
   display: block;
 }
+header .nav-middle {
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  header .nav-middle {
+    position: absolute;
+    top: 18px;
+    left: 0;
+  }
+}
+header .nav-middle a {
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  header .nav-middle a {
+    display: none;
+  }
+}
 header .nav-middle .btn-book {
   width: 160px;
   height: 48px;
@@ -435,6 +511,30 @@ header .nav-middle .btn-book {
   border-radius: 48px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  header .nav-middle .btn-book {
+    width: 30px;
+    height: 30px;
+  }
+}
+header .nav-middle .btn-book span {
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  header .nav-middle .btn-book span {
+    display: none;
+  }
+}
+header .nav-middle .btn-book .fa-solid {
+  display: none;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  header .nav-middle .btn-book .fa-solid {
+    display: block;
+  }
 }
 header .nav-middle .btn-book:hover {
   background-color: #1F2A44;
@@ -444,6 +544,89 @@ header .nav-middle .btn-book:hover {
 
 #MobNav {
   display: none;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  #MobNav {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+#MobNav .mob-list {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 50%;
+  height: 100%;
+  overflow: hidden scroll;
+  background-color: #62B9D6;
+  padding: 50px 32px 4rem;
+  z-index: 110;
+  color: #fff;
+  -webkit-transform: translateX(200%);
+  transform: translateX(200%);
+  visibility: hidden;
+  -webkit-transition: 0.5s cubic-bezier(1, 0.51, 0.19, 1);
+  transition: 0.5s cubic-bezier(1, 0.51, 0.19, 1);
+}
+#MobNav .mob-list.on {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  visibility: visible;
+}
+#MobNav .mob-list::-webkit-scrollbar {
+  display: none;
+}
+#MobNav .mob-list .btn-cloes {
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  z-index: 10;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#MobNav .mob-list .btn-cloes:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+#MobNav .mob-list .btn-cloes .line::before, #MobNav .mob-list .btn-cloes .line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+#MobNav .mob-list .btn-cloes .line::before {
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+#MobNav .mob-list .btn-cloes .line::after {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+}
+#MobNav .mob-list li {
+  position: relative;
+  text-align: left;
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+#MobNav .mob-list li a {
+  font-size: 1.2rem;
+}
+#MobNav .mob-list li .sub-list2 {
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 footer {
@@ -457,6 +640,12 @@ footer .footer-wrap {
   grid-template-columns: repeat(12, 1fr);
   gap: 32px;
   color: #fff;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  footer .footer-wrap {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 footer .footer-wrap h4 {
   font-weight: 600;
@@ -531,17 +720,53 @@ body {
   font-size: 5rem;
   margin-bottom: 0.4rem;
   overflow: hidden;
+  /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 1024px) {
+  .main h2 {
+    font-size: 3rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .main h2 {
+    font-size: 1.8rem;
+  }
 }
 .main h3 {
   font-size: 3rem;
   color: #fff;
   margin-bottom: 0.4rem;
+  /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 1024px) {
+  .main h3 {
+    font-size: 2rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .main h3 {
+    font-size: 1.4rem;
+  }
 }
 
 .sc-main {
   position: relative;
   scroll-margin-top: 4rem;
   height: 830.7px;
+  /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 1024px) {
+  .sc-main {
+    height: 485.7px;
+  }
+}
+@media all and (max-width: 767px) {
+  .sc-main {
+    height: 470.7px;
+  }
 }
 .sc-main .bg {
   overflow: hidden;
@@ -559,11 +784,34 @@ body {
   left: 0px;
   top: 0px;
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .sc-main img {
+    height: auto;
+  }
+}
+.sc-main .pc-bg {
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .sc-main .pc-bg {
+    display: none;
+  }
+}
+.sc-main .mob-bg {
+  display: none;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .sc-main .mob-bg {
+    display: block;
+  }
 }
 .sc-main .text-area {
   padding: 32px;
@@ -593,6 +841,12 @@ body {
   border-radius: 48px;
   -webkit-transition: background-color 0.3s, color 0.3s, border 0.3s;
   transition: background-color 0.3s, color 0.3s, border 0.3s;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .sc-main .text-area a {
+    font-size: 1rem;
+  }
 }
 .sc-main .text-area a:hover {
   background-color: #1F2A44;
@@ -622,6 +876,12 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 32px;
+  /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+}
+@media all and (max-width: 1024px) {
+  .sc-info {
+    padding: 10vh 32px;
+  }
 }
 .sc-info .title,
 .sc-info .text {
@@ -647,6 +907,12 @@ body {
   border-radius: 48px;
   -webkit-transition: background-color 0.3s, color 0.3s, border 0.3s;
   transition: background-color 0.3s, color 0.3s, border 0.3s;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .sc-info .text a {
+    font-size: 1rem;
+  }
 }
 .sc-info .text a:hover {
   background-color: #1F2A44;
@@ -662,6 +928,18 @@ body {
 .sc-search h3 {
   margin-bottom: 10px;
   font-size: 5rem;
+  /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 1024px) {
+  .sc-search h3 {
+    font-size: 3rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .sc-search h3 {
+    font-size: 1.8rem;
+  }
 }
 .sc-search #citySearchForm input {
   width: 360px;
@@ -703,6 +981,19 @@ body {
   position: relative;
   scroll-margin-top: 4rem;
   height: 830.7px;
+  /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 1024px) {
+  .sc-explore {
+    height: 643px;
+  }
+}
+@media all and (max-width: 767px) {
+  .sc-explore {
+    height: 264px;
+    font-size: 1.8rem;
+  }
 }
 .sc-explore .bg {
   overflow: hidden;
@@ -720,7 +1011,7 @@ body {
   left: 0px;
   top: 0px;
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 50%;
@@ -736,6 +1027,14 @@ body {
   max-width: 46.875rem;
   color: #fff;
 }
+.sc-explore .text-area p {
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .sc-explore .text-area p {
+    font-size: 12px;
+  }
+}
 .sc-explore a {
   width: 160px;
   height: 48px;
@@ -750,6 +1049,12 @@ body {
   border-radius: 48px;
   -webkit-transition: background-color 0.3s, color 0.3s, border 0.3s;
   transition: background-color 0.3s, color 0.3s, border 0.3s;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .sc-explore a {
+    font-size: 1rem;
+  }
 }
 .sc-explore a:hover {
   background-color: #1F2A44;
@@ -836,6 +1141,12 @@ body {
   border-radius: 48px;
   -webkit-transition: background-color 0.3s, color 0.3s, border 0.3s;
   transition: background-color 0.3s, color 0.3s, border 0.3s;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .contents .sc-contents .text-area .btn a {
+    font-size: 1rem;
+  }
 }
 .contents .sc-contents .text-area .btn a:hover {
   background-color: #1F2A44;
@@ -847,6 +1158,9 @@ body {
   width: 50vw;
   overflow: hidden;
   height: 100vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .contents .sc-contents .img-area img {
   opacity: 1;
@@ -968,6 +1282,15 @@ body {
 .contact .inner1 {
   position: relative;
   background: #FFEDD4;
+  overflow: hidden;
+}
+.contact .inner1 h3 {
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .contact .inner1 h3 {
+    font-size: 1rem;
+  }
 }
 .contact .inner1 .btn a {
   width: 160px;
@@ -983,6 +1306,18 @@ body {
   border-radius: 48px;
   -webkit-transition: background-color 0.3s, color 0.3s, border 0.3s;
   transition: background-color 0.3s, color 0.3s, border 0.3s;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .contact .inner1 .btn a {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .contact .inner1 .btn a {
+    width: 130px;
+  }
 }
 .contact .inner1 .btn a:hover {
   background-color: #1F2A44;
@@ -1028,6 +1363,18 @@ body {
   position: relative;
   padding: 32px;
   position: relative;
+  /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 1024px) {
+  .contact .inner1 .bottom {
+    height: 566px;
+  }
+}
+@media all and (max-width: 767px) {
+  .contact .inner1 .bottom {
+    height: 231px;
+  }
 }
 .contact .inner1 .bottom .text-area {
   position: relative;
@@ -1042,9 +1389,33 @@ body {
 }
 .contact .inner1 .bottom .text-area h3 {
   font-size: 3rem;
+  /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 1024px) {
+  .contact .inner1 .bottom .text-area h3 {
+    font-size: 2rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .contact .inner1 .bottom .text-area h3 {
+    font-size: 1.2rem;
+  }
 }
 .contact .inner1 .bottom .text-area p {
   color: #fff;
+  /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 1024px) {
+  .contact .inner1 .bottom .text-area p {
+    font-size: 2rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .contact .inner1 .bottom .text-area p {
+    font-size: 0.7rem;
+  }
 }
 .contact .inner1 .bottom .img-bg {
   overflow: hidden;
@@ -1196,6 +1567,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .contact .inner2 .top .sns {
+    margin-top: 20px;
+  }
 }
 .contact .inner2 .top .sns h4 {
   color: #62B9D6;

@@ -86,6 +86,15 @@ gsap.to('.purple-bg .bg-inner',3,{
           $('.class-area').toggleClass('on');
       })
 
+      $('.menu-trigger').click(function(){
+        $('header').addClass('toggle')
+        $('.mob-list').toggleClass('on');
+    })
+
+    $('.mob-list .btn-cloes').click(function () {
+      $('.mob-list').removeClass('on');
+      $('header').removeClass('toggle');
+  })
       $('.class-area .btn-cloes').click(function () {
           $('.class-area').removeClass('on');
           $('header').removeClass('toggle');
@@ -94,11 +103,17 @@ gsap.to('.purple-bg .bg-inner',3,{
 
       $(document).click(function (e) {
           if ($('.header').has(e.target).length === 0) {
-            $('.class-area').removeClass('on');
+            $('.class-area, .mob-list').removeClass('on');
             $('header').removeClass('toggle');
           } 
       })
 
+      $(document).ready(function(){
+        $("#MobNav ul .sub-menu .sub-list").hide();
+        $("#MobNav ul .sub-menu").click(function(){
+          $("ul",this).slideToggle("fast");
+        });
+      });
 
       const subTitle = new SplitType('[data-text]', { types: 'words, chars', });
 

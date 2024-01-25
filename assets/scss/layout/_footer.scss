@@ -8,8 +8,11 @@ footer{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 32px;
-
     color: #fff;
+    @include mobile{
+    grid-template-columns: repeat(4, 1fr);
+
+    }
     h4{
         font-weight: 600;
     }

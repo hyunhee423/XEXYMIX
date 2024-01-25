@@ -569,6 +569,12 @@ header .nav-middle .btn-book:hover {
   visibility: hidden;
   -webkit-transition: 0.5s cubic-bezier(1, 0.51, 0.19, 1);
   transition: 0.5s cubic-bezier(1, 0.51, 0.19, 1);
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  #MobNav .mob-list {
+    width: 80%;
+  }
 }
 #MobNav .mob-list.on {
   -webkit-transform: translateX(0);
@@ -1119,13 +1125,31 @@ body {
 }
 .contents .sc-contents .text-area h4 {
   font-size: 2.6875rem;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .contents .sc-contents .text-area h4 {
+    font-size: 2rem;
+  }
 }
 .contents .sc-contents .text-area p {
   line-height: 2;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .contents .sc-contents .text-area p {
+    font-size: 1rem;
+  }
 }
 .contents .sc-contents .text-area p .tit {
   font-size: 1.5rem;
   margin-top: 3rem;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .contents .sc-contents .text-area p .tit {
+    font-size: 1.3rem;
+  }
 }
 .contents .sc-contents .text-area .btn a {
   width: 160px;
@@ -1610,6 +1634,12 @@ body {
   visibility: hidden;
   -webkit-transition: 0.5s cubic-bezier(1, 0.51, 0.19, 1);
   transition: 0.5s cubic-bezier(1, 0.51, 0.19, 1);
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .class-area {
+    width: 80%;
+  }
 }
 .class-area.on {
   -webkit-transform: translateX(0);
@@ -1662,6 +1692,12 @@ body {
   font-size: 2.6875rem;
   line-height: 1;
   margin-bottom: 1.875rem;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .class-area .top h3 {
+    font-size: 2rem;
+  }
 }
 .class-area .top .search-form {
   width: 360px;
@@ -1677,6 +1713,12 @@ body {
   -webkit-box-shadow: none;
           box-shadow: none;
   margin-bottom: 3.4375rem;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .class-area .top .search-form {
+    width: 100%;
+  }
 }
 .class-area .top .search-form input {
   background: none;
@@ -1723,9 +1765,16 @@ body {
   font-size: 1.5rem;
   line-height: 1.1;
   font-weight: 600;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media all and (max-width: 767px) {
+  .class-area .bottom .class-list a h4 {
+    font-size: 1.2rem;
+  }
 }
 .class-area .bottom .class-list a p {
   font-size: 1.0625rem;
+  font-size: 14px;
 }
 .class-area .bottom li::after {
   content: "";

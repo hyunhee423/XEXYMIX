@@ -289,12 +289,21 @@ body {
 
             h4 {
                 font-size: 2.6875rem;
+                @include mobile{
+                    font-size: 2rem;
+                }
             }
             p{
                 line-height: 2;
+                @include mobile{
+                    font-size: 1rem;
+                }
                 .tit{
                     font-size: 1.5rem;
                     margin-top: 3rem;
+                    @include mobile{
+                        font-size: 1.3rem;
+                    }
                 }
             }
             .btn {
@@ -681,6 +690,9 @@ body {
     transform: translateX(-100%);
     visibility: hidden;
     transition: 0.5s cubic-bezier(1, 0.51, 0.19, 1);
+    @include mobile{
+        width: 80%;
+    }
     &.on{
         transform: translateX(0);
         visibility: visible;
@@ -733,6 +745,9 @@ body {
             font-size: 2.6875rem;
             line-height: 1;
             margin-bottom: 1.875rem;
+            @include mobile{
+                font-size: 2rem;
+            }
         }
 
         .search-form {
@@ -747,6 +762,9 @@ body {
             border: 1px solid #fff;
             box-shadow: none;
             margin-bottom: 3.4375rem;
+            @include mobile{
+                width: 100%;
+            }
 
             input {
                 background: none;
@@ -789,10 +807,14 @@ body {
                     font-size: 1.5rem;
                     line-height: 1.1;
                     font-weight: 600;
+                    @include mobile{
+                        font-size: 1.2rem;
+                    }
                 }
 
                 p {
                     font-size: 1.0625rem;
+                    font-size: 14px;
                 }
             }
         }
